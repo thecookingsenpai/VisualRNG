@@ -51,6 +51,14 @@ Well, the trick here is that a video frame contains informations taken from the 
 
 By hashing the image, deriving a number from the hash and using it as a seed for our random number generator, we obtain a high quality random number with a cheap DIY setup.
 
+## Theory summary
+
+Randomness is as good as the goodness of the below entropy. Entropy is good if it is unpredictable, unreplicable and unknown to third parties. Timestamp is often used as entropy source as it has literally a millisecond of life span.
+
+Following this reasoning, any unpredictable entropy source that is only observable by the randomness generator should generate true randomness.
+
+By combining multiple sources of entropy, all highly connected to the local environment and influencing one the other, such as sounds, lights and colors, we obtain a practically unpredictable, unrepicable and highly unstable source of entropy. Combining three different sources also strenghten the resistance of the generator as even the failure of 2 of the 3 sources (e.g. hacked sound card or anything else that breaks up) still offers a reasonable grade of security.
+
 ## License
 
 MIT
